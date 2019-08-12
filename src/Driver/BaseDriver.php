@@ -4,7 +4,7 @@ namespace Bearcodi\CPDF\Driver;
 
 use Bearcodi\CPDF\Driver\DriverContract;
 
-abstract class Base implements DriverContract
+abstract class BaseDriver implements DriverContract
 {
     /**
      * Return the path when used in string interpolation.

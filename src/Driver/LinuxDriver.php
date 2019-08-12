@@ -2,16 +2,16 @@
 
 namespace Bearcodi\CPDF\Driver;
 
-use Bearcodi\CPDF\Driver\Base;
+use Bearcodi\CPDF\Driver\BaseDriver;
 
-class CPDFLinux extends Base
+class LinuxDriver extends BaseDriver
 {
     /**
      * Return the binary path
      * 
      * @return string
      */
-    public function path() :string
+    public function path()
     {
         return realpath(__DIR__ . '/../bin/cpdf-linux-64bit');
     }

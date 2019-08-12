@@ -1,18 +1,18 @@
 <?php
 
-namespace Bearcodi\CPDF\Tests\Unit;
+namespace Bearcodi\CPDF\Tests\Unit\Drivers;
 
 use Bearcodi\CPDF\Tests\TestCase;
-use Bearcodi\CPDF\Driver\CPDFLinux;
+use Bearcodi\CPDF\Driver\LinuxDriver;
 
-class CPDFDriverLinuxTest extends TestCase
+class LinuxDriverTest extends TestCase
 {
     /** @test */
     public function the_driver_returns_the_realpath_to_bin_file()
     {
-        $binPath = realpath(__DIR__ . '/../../src/bin/cpdf-linux-64bit');
+        $binPath = $this->pathSrc('bin/cpdf-linux-64bit');
         
-        $driver = new CPDFLinux;
+        $driver = new LinuxDriver;
         
         $this->assertEquals($binPath, $driver->path());
         

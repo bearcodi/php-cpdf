@@ -9,5 +9,5 @@ interface DriverContract
      * 
      * @return string
      */
-    public function path() :string;
+    public function path();
 }
